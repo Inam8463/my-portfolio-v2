@@ -1,7 +1,6 @@
 # Portfolio V2
 
-My personal developer portfolio built with the MERN stack. Displays my projects, skills, and experience with live GitHub integration that automatically pulls my repositories and stats.
-
+My personal updated portfolio built with the MERN stack. Displays my projects, skills, and experience with live GitHub integration that automatically pulls my repositories and stats.
 
 ---
 
@@ -113,7 +112,3 @@ Portfolio-V2/
 - [ ] Deploy to production
 
 ---
-
-## License
-
-MIT
