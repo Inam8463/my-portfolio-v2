@@ -37,13 +37,13 @@ I built this to level up from static websites to full-stack development and to h
 
 ## Getting Started
 
-git clone https://github.com/inam8463/Portfolio-V2.git
-cd Portfolio-V2
-npm run install-all
-npm run dev
+git clone https://github.com/inam8463/Portfolio-V2.git <br>
+cd Portfolio-V2 <br>
+npm run install-all <br>
+npm run dev <br>
 
-Frontend runs at http://localhost:3000
-Backend runs at http://localhost:5000
+Frontend runs at http://localhost:3000 <br>
+Backend runs at http://localhost:5000 <br>
 
 ---
 
@@ -51,46 +51,27 @@ Backend runs at http://localhost:5000
 
 Create server/.env and add:
 
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/portfolio
-GITHUB_TOKEN=your_github_token
-GITHUB_USERNAME=inam8463
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_gmail_app_password
-CLIENT_URL=http://localhost:3000
+PORT=5000   <br>
+MONGO_URI=mongodb://localhost:27017/portfolio <br>
+GITHUB_TOKEN=your_github_token <br>
+GITHUB_USERNAME=inam8463 <br>
+EMAIL_USER=your_email@gmail.com  <br>
+EMAIL_PASS=your_gmail_app_password  <br>
+CLIENT_URL=http://localhost:3000  <br>
 
 Create client/.env and add:
 
-REACT_APP_API_URL=http://localhost:5000/api
-REACT_APP_GITHUB_USERNAME=inam8463
-
----
-
-## Project Structure
-
-Portfolio-V2/
-├── server/
-│   ├── index.js
-│   ├── routes/
-│   │   ├── github.js
-│   │   ├── contact.js
-│   │   └── stats.js
-│   └── models/
-│       └── Message.js
-└── client/
-    └── src/
-        ├── components/
-        ├── pages/
-        └── hooks/
+REACT_APP_API_URL=http://localhost:5000/api  <br>
+REACT_APP_GITHUB_USERNAME=inam8463  <br>
 
 ---
 
 ## Pages
 
-/ → Home — hero section, GitHub stats, featured projects
-/projects → All repositories with search and filter
-/about → Bio, tech stack, experience timeline
-/contact → Contact form
+/ → Home — hero section, GitHub stats, featured projects <br>
+/projects → All repositories with search and filter <br>
+/about → Bio, tech stack, experience timeline <br>
+/contact → Contact form <br>
 
 ---
 
