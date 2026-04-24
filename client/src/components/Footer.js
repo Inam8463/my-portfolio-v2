@@ -23,9 +23,9 @@ export default function Footer() {
             <h4>Connect</h4>
             <div className="social-icons">
               <a href="https://github.com/Inam8463" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FiGithub /></a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
+              <a href="www.linkedin.com/in/muhammad-inam-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
               <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FiTwitter /></a>
-              <a href="mailto:you@email.com" aria-label="Email"><FiMail /></a>
+              <a href="muhamadinam2@gmail.com" aria-label="Email"><FiMail /></a>
             </div>
           </div>
         </div>

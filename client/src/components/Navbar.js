@@ -44,7 +44,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Inam8463"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary nav-cta"

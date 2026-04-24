@@ -15,7 +15,6 @@ const skills = [
   { name: 'TypeScript', icon: '🔷', color: '#3178c6' },
   { name: 'Git', icon: '🔀', color: '#f05032' },
   { name: 'REST APIs', icon: '🔗', color: '#ff6584' },
-  { name: 'Docker', icon: '🐳', color: '#2496ed' },
   { name: 'AWS', icon: '☁️', color: '#ff9900' },
 ];
 
