@@ -11,7 +11,14 @@ export function useGitHubRepos() {
   useEffect(() => {
     fetch(`${GITHUB_API}/users/${USERNAME}/repos?sort=updated&per_page=30`)
       .then(r => r.json())
-      .then(data => setRepos(data.filter(r => !r.fork)))
+      .then(data => {
+        // Check if response is an array (success) or error object
+        if (Array.isArray(data)) {
+          setRepos(data.filter(r => !r.fork));
+        } else {
+          setError(data.message || 'Failed to fetch repos');
+        }
+      })
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, []);
@@ -27,7 +34,13 @@ export function useGitHubProfile() {
   useEffect(() => {
     fetch(`${GITHUB_API}/users/${USERNAME}`)
       .then(r => r.json())
-      .then(data => setProfile(data))
+      .then(data => {
+        if (data.login) {
+          setProfile(data);
+        } else {
+          setError(data.message);
+        }
+      })
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, []);
@@ -43,13 +56,16 @@ export function useGitHubStats() {
     fetch(`${GITHUB_API}/users/${USERNAME}/repos?per_page=100`)
       .then(r => r.json())
       .then(data => {
-        const totalStars = data.reduce((acc, r) => acc + r.stargazers_count, 0);
-        const totalForks = data.reduce((acc, r) => acc + r.forks_count, 0);
-        setStats({
-          public_repos: data.length,
-          totalStars,
-          totalForks,
-        });
+        if (Array.isArray(data)) {
+          const totalStars = data.reduce((acc, r) => acc + r.stargazers_count, 0);
+          const totalForks = data.reduce((acc, r) => acc + r.forks_count, 0);
+          setStats({
+            public_repos: data.length,
+            totalStars,
+            totalForks,
+            followers: 0,
+          });
+        }
       })
       .catch(() => setStats(null))
       .finally(() => setLoading(false));
