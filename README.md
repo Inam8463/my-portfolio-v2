@@ -10,6 +10,8 @@ This is the second version of my portfolio. The first was built with plain HTML,
 
 I built this to level up from static websites to full-stack development and to have a portfolio that updates itself automatically as I push new projects to GitHub.
 
+Live Demo: https://my-personal-portfolio-v2.netlify.app/
+
 ---
 
 ## Features
@@ -90,6 +92,5 @@ REACT_APP_GITHUB_USERNAME=inam8463  <br>
 - [ ] Add blog section
 - [ ] Light mode toggle
 - [ ] Admin dashboard to view contact messages
-- [ ] Deploy to production
 
 ---
