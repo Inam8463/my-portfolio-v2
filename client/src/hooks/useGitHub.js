@@ -1,7 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-
-// const API = process.env.REACT_APP_API_URL || '/api';
 
 const GITHUB_API = 'https://api.github.com';
 const USERNAME = 'Inam8463';
@@ -12,10 +9,10 @@ export function useGitHubRepos() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${API}/github/repos`)
-      .then((r) => setRepos(r.data))
-      .catch((e) => setError(e.message))
+    fetch(`${GITHUB_API}/users/${USERNAME}/repos?sort=updated&per_page=30`)
+      .then(r => r.json())
+      .then(data => setRepos(data.filter(r => !r.fork)))
+      .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, []);
 
@@ -28,10 +25,10 @@ export function useGitHubProfile() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${API}/github/profile`)
-      .then((r) => setProfile(r.data))
-      .catch((e) => setError(e.message))
+    fetch(`${GITHUB_API}/users/${USERNAME}`)
+      .then(r => r.json())
+      .then(data => setProfile(data))
+      .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, []);
 
@@ -43,9 +40,17 @@ export function useGitHubStats() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get(`${API}/stats`)
-      .then((r) => setStats(r.data))
+    fetch(`${GITHUB_API}/users/${USERNAME}/repos?per_page=100`)
+      .then(r => r.json())
+      .then(data => {
+        const totalStars = data.reduce((acc, r) => acc + r.stargazers_count, 0);
+        const totalForks = data.reduce((acc, r) => acc + r.forks_count, 0);
+        setStats({
+          public_repos: data.length,
+          totalStars,
+          totalForks,
+        });
+      })
       .catch(() => setStats(null))
       .finally(() => setLoading(false));
   }, []);
