@@ -10,6 +10,14 @@ My personal updated portfolio built with the MERN stack. Displays my projects, s
 
 ---
 
+## 📸 Screenshots
+
+| Home & GitHub Stats | Projects | Contact |
+|---|---|---|
+| ![Home](images/Screenshot%202026-05-10%20151532.png) | ![Projects](images/Screenshot%202026-05-10%20151552.png) | ![Contact](images/Screenshot%202026-05-10%20151615.png) |
+
+---
+
 ## About
 
 This is the second version of my portfolio. The first was built with plain HTML, CSS, and JavaScript. This version is a full-stack app with a real backend, database, and live GitHub API integration.
