@@ -2,6 +2,12 @@
 
 My personal updated portfolio built with the MERN stack. Displays my projects, skills, and experience with live GitHub integration that automatically pulls my repositories and stats.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Portfolio-blue?style=flat-square)](https://my-personal-portfolio-v2.netlify.app/)
+[![GitHub](https://img.shields.io/badge/Source%20Code-GitHub-black?style=flat-square&logo=github)](https://github.com/inam8463/Portfolio-V2)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=flat-square&logo=mongodb)
+
 ---
 
 ## About
